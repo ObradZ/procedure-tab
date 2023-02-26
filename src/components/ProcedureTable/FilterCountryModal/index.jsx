@@ -6,16 +6,16 @@ import Switch from "react-switch";
 import ActiveTag from "elements/ActiveTag";
 
 const defaultCountries = [
-    { value: "usa", label: "USA", id: 0 },
-    { value: "france", label: "France", id: 1 },
-    { value: "germany", label: "Germany", id: 2 },
-    { value: "italy", label: "Italy", id: 3 },
-    { value: "belgium", label: "Belgium", id: 4 },
-    { value: "spain", label: "Spain", id: 5 },
-    { value: "netherlands", label: "Netherlands", id: 6 },
-    { value: "switzerland", label: "Switzerland", id: 7 },
-    { value: "sweden", label: "Sweden", id: 8 },
-    { value: "portugal", label: "Portugal", id: 9 },
+    { value: "usa", label: "USA", id: 0, code: "us" },
+    { value: "france", label: "France", id: 1, code: "fr" },
+    { value: "germany", label: "Germany", id: 2, code: "de" },
+    { value: "italy", label: "Italy", id: 3, code: "it" },
+    { value: "belgium", label: "Belgium", id: 4, code: "be" },
+    { value: "spain", label: "Spain", id: 5, code: "es" },
+    { value: "netherlands", label: "Netherlands", id: 6, code: "nl" },
+    { value: "switzerland", label: "Switzerland", id: 7, code: "ch" },
+    { value: "sweden", label: "Sweden", id: 8, code: "se" },
+    { value: "portugal", label: "Portugal", id: 9, code: "pt" },
 ];
 
 const FilterCountry = ({ isOpen, setIsOpen, applyCountries }) => {
@@ -79,7 +79,7 @@ const FilterCountry = ({ isOpen, setIsOpen, applyCountries }) => {
             </div>
             <div className="active-countries-wrapper">
                 {checkedCountries.map((c) => (
-                    <ActiveTag label={c.label} onClick={() => handleToggle(c)} />
+                    <ActiveTag key={c.id} label={c.label} onClick={() => handleToggle(c)} />
                 ))}
             </div>
             <div className="exclude-wrapper">

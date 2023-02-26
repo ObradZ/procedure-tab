@@ -2,7 +2,7 @@ import FilterIcon from "assets/filter.svg";
 import TableIcon from "assets/table-icon.svg";
 import ArrowDownIcon from "assets/arrow-down.svg";
 import ActiveTag from "elements/ActiveTag";
-const FilterOptions = ({ activeCountries, setIsCountryFilterOpen }) => {
+const FilterOptions = ({ activeCountries, setIsCountryFilterOpen, clearAll, handleRemoveCountry }) => {
     return (
         <div className="filter-options">
             <button type="button" className="filter-btn" onClick={setIsCountryFilterOpen}>
@@ -14,7 +14,11 @@ const FilterOptions = ({ activeCountries, setIsCountryFilterOpen }) => {
             <div className="active-tags-wrapper">
                 <div className="active-tags">
                     {activeCountries.map((country) => (
-                        <ActiveTag label={country.label} onClick={() => 1} />
+                        <ActiveTag
+                            key={country.id}
+                            label={country.label}
+                            onClick={() => handleRemoveCountry(country)}
+                        />
                     ))}
                 </div>
                 <div className="tags-buttons-wrapper">
@@ -22,7 +26,7 @@ const FilterOptions = ({ activeCountries, setIsCountryFilterOpen }) => {
                         <img src={TableIcon} alt="table" />
                     </button>
                     <p className="filters-info">Filter: {activeCountries.length}</p>
-                    <button type="button" className="clear-all-btn">
+                    <button type="button" className="clear-all-btn" onClick={clearAll}>
                         Clear all
                     </button>
                 </div>

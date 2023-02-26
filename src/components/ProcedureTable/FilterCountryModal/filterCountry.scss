@@ -3,12 +3,12 @@ $modal-padding: 14px;
     padding: 0 $modal-padding;
 }
 .filter-country-modal {
+    background-color: $clear-white;
     position: absolute;
     width: 280px;
-    overflow-y: auto;
-    left: 185px;
-    top: 170px;
-    box-shadow: 0px 10px 30px rgba(48, 49, 63, 0.2);
+    left: 100px;
+    top: 155px;
+    box-shadow: 0px 10px 30px rgba(48, 49, 63, 0.25);
     padding: 8px 0;
     border-radius: 4px;
 
@@ -35,6 +35,19 @@ $modal-padding: 14px;
         cursor: pointer;
     }
 }
+
+.filter-country-modal::after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -1rem;
+    width: 0; 
+    height: 0; 
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-bottom: 1rem solid $clear-white;
+}
+
 .country-search {
     background-color: #f1f2f5;
     border-color: #f1f2f5;
@@ -134,7 +147,7 @@ $modal-padding: 14px;
     flex-wrap: wrap;
     margin-bottom: 1rem;
 
-    >div{
+    > div {
         margin-bottom: 4px;
         margin-right: 4px;
     }

@@ -49,9 +49,26 @@
     }
 }
 .active-tags-wrapper {
+    max-width: calc(100% - 408px);
     width: 100%;
     padding: 6px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(70, 79, 96, 0.16);
+}
+// Update width and scrollbar
+.active-tags {
+    max-width: calc(100% - 180px);
+    overflow-x: auto;
+}
+.active-tags::-webkit-scrollbar {
+    display: none;
+}
+
+.active-tags::-webkit-scrollbar-track {
+    display: none;
+}
+
+.active-tags::-webkit-scrollbar-thumb {
+    display: none;
 }
 
 .table-btn {
