@@ -1,0 +1,235 @@
+$modal-padding: 14px;
+.header-wrapper {
+    padding: 0 $modal-padding;
+}
+.filter-country-modal {
+    position: absolute;
+    width: 280px;
+    overflow-y: auto;
+    left: 185px;
+    top: 170px;
+    box-shadow: 0px 10px 30px rgba(48, 49, 63, 0.2);
+    padding: 8px 0;
+    border-radius: 4px;
+
+    .title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        font-family: $font-inter !important;
+        color: $dark-blue-text;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .back-arrow {
+        border: solid #6b6c7e;
+        background-color: transparent;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        margin: 0 10px 0 10px;
+        cursor: pointer;
+    }
+}
+.country-search {
+    background-color: #f1f2f5;
+    border-color: #f1f2f5;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: $font-inter !important;
+    color: $main-text;
+    border: 1px solid #e7e7ed;
+    border-radius: 4px;
+    padding: 6px 12px;
+    margin-bottom: 1.6rem;
+    width: 100%;
+    background-image: url("../../../assets/search.svg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 16px);
+    padding-right: 10px;
+}
+.country-search::placeholder {
+    color: #464f60;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: $font-inter !important;
+}
+
+.border-wrapper {
+    border-top: 1px solid #e7e7ed;
+    border-bottom: 1px solid #e7e7ed;
+}
+.exclude-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 $modal-padding;
+
+    p {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        font-family: $font-inter !important;
+        color: $main-text;
+        margin: 1.4rem 0 1rem 1rem;
+    }
+}
+.exclude-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -14px;
+    width: calc(100% + $modal-padding * 2);
+    border-top: 1px solid #e7e7ed;
+}
+.exclude-wrapper::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: -14px;
+    width: calc(100% + $modal-padding * 2);
+    border-top: 1px solid #e7e7ed;
+}
+
+.exclude-list-wrapper {
+    position: relative;
+    // padding-top: 1rem;
+    ul {
+        margin: 0;
+        list-style: none;
+        padding: 0;
+        height: 247px;
+        overflow-y: scroll;
+        li {
+            padding: 1.3rem 1.6rem;
+        }
+        .checked {
+            background: #f0f5ff;
+        }
+    }
+    ul::-webkit-scrollbar {
+        width: 0.6rem;
+        border-radius: 4px;
+    }
+
+    ul::-webkit-scrollbar-track {
+        border-radius: 4px;
+    }
+
+    ul::-webkit-scrollbar-thumb {
+        background-color: #cdced9;
+        border-radius: 4px;
+    }
+}
+.active-countries-wrapper {
+    padding: 0 $modal-padding;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+
+    >div{
+        margin-bottom: 4px;
+        margin-right: 4px;
+    }
+}
+.exclude-list-wrapper::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: -14px;
+    width: calc(100% + $modal-padding * 2);
+    border-top: 1px solid #e7e7ed;
+}
+
+.country-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #272833;
+    font-family: $font-inter;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    .checkmark {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        background-color: #ffffff;
+        border: 1px solid #cdced9;
+        border-radius: 2px;
+    }
+}
+/* On mouse-over, add a grey background color */
+.country-checkbox:hover input ~ .checkmark {
+    background-color: #fff;
+}
+
+/* When the checkbox is checked, add a blue background */
+.country-checkbox input:checked ~ .checkmark {
+    background-color: $blue-text;
+    border-color: $blue-text;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.country-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.country-checkbox .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 2px;
+    height: 6px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.buttons-wrapper {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 $modal-padding;
+
+    button:first-child {
+        margin-right: 2rem;
+    }
+}
+
+.d-none {
+    display: none;
+}

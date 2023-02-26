@@ -1,0 +1,53 @@
+.tabs-navigation {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    padding: 0 1rem;
+    margin-top: 2rem;
+    margin-bottom: 0.7rem;
+
+    button {
+        background: transparent;
+        border: 0;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        font-family: $font-inter !important;
+        color: $main-text;
+        margin-right: 2.4rem;
+        padding: 0;
+        display: flex;
+        cursor: pointer;
+    }
+    span {
+        font-family: $font-inter !important;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 10px;
+        letter-spacing: 0.03em;
+        padding: 4px 6px;
+        background-color: $light-gray;
+        border-radius: 50%;
+        text-align: center;
+        display: inline-block;
+        margin-left: 4px;
+    }
+    .tab-separator {
+        position: relative;
+        margin-right: 14px;
+    }
+    .tab-separator::after {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 1px;
+        right: 3px;
+        top: 2px;
+        background-color: #d5dbe5;
+    }
+    .selected {
+        color: $purple-text;
+        font-weight: 700;
+    }
+}

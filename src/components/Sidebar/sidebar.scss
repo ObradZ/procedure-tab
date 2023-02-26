@@ -1,0 +1,23 @@
+.sidebar{
+    background-color: $background-blue;
+    width: 72px;
+    padding: 17px 0;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button{
+        background-color: transparent;
+        border: 0;
+        margin-bottom: 2rem;
+        cursor: pointer;
+    }
+
+    .logo-button{
+        margin-bottom: 3rem;
+    }
+}

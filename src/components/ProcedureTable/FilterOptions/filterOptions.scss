@@ -1,0 +1,99 @@
+.filter-options {
+    display: flex;
+    align-items: center;
+}
+.active-tags-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.search-option {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(70, 79, 96, 0.16);
+    border: 0;
+    padding: 9px 14px 9px 37px;
+    font-family: $font-inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: $main-text;
+    background-image: url("../../../assets/search.svg");
+    background-repeat: no-repeat;
+    background-position: 13px;
+    width: 280px;
+}
+.search-option::placeholder {
+    font-weight: 400;
+    color: #a1a9b8;
+}
+.filter-btn {
+    cursor: pointer;
+    color: $main-text;
+    font-family: $font-inter;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(70, 79, 96, 0.16);
+    border: 0;
+    background: $clear-white;
+    padding: 9px 14px;
+    display: flex;
+    align-items: center;
+    span {
+        margin: 0 1rem;
+    }
+}
+.active-tags-wrapper {
+    width: 100%;
+    padding: 6px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(70, 79, 96, 0.16);
+}
+
+.table-btn {
+    padding: 6px 10px;
+    background-color: $clear-white;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(70, 79, 96, 0.16);
+    border-radius: 6px;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.filters-info {
+    position: relative;
+    font-family: $font-inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: $main-text;
+    padding-right: 5px;
+    margin: 0 5px 0 0;
+}
+.filters-info::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 1.2rem;
+    right: 0;
+    top: 4px;
+    background-color: $light-gray;
+}
+
+.clear-all-btn {
+    color: $purple-text;
+    font-family: $font-inter;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    background-color: $clear-white;
+    border: 0;
+    cursor: pointer;
+}
