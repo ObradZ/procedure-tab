@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/procedure-tab/static/css/main.ba4b2f35.css",
-    "main.js": "/procedure-tab/static/js/main.8680856b.js",
+    "main.js": "/procedure-tab/static/js/main.4c3cfb2a.js",
     "static/js/787.78b011e2.chunk.js": "/procedure-tab/static/js/787.78b011e2.chunk.js",
     "static/media/flag.svg": "/procedure-tab/static/media/flag.5bacb10794c619a5120f62abeb00a7ee.svg",
     "static/media/Settings.svg": "/procedure-tab/static/media/Settings.f7b43c7480fc8e6c00f436a709e2ebf7.svg",
@@ -18,11 +18,11 @@
     "static/media/Logo.svg": "/procedure-tab/static/media/Logo.a8a5007850a758209e1ea6ed66220881.svg",
     "static/media/arrow-down.svg": "/procedure-tab/static/media/arrow-down.bb8bdd7a45545d8b7a646667570344ab.svg",
     "main.ba4b2f35.css.map": "/procedure-tab/static/css/main.ba4b2f35.css.map",
-    "main.8680856b.js.map": "/procedure-tab/static/js/main.8680856b.js.map",
+    "main.4c3cfb2a.js.map": "/procedure-tab/static/js/main.4c3cfb2a.js.map",
     "787.78b011e2.chunk.js.map": "/procedure-tab/static/js/787.78b011e2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ba4b2f35.css",
-    "static/js/main.8680856b.js"
+    "static/js/main.4c3cfb2a.js"
   ]
 }
