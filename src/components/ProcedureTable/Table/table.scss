@@ -10,19 +10,31 @@ $table-text-color: #171c26;
         text-align: left;
         padding: 1.4rem 1rem;
         margin: 0 0.5rem;
-        font-family: $font-inter;
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 18px;
+        border: 0;
+    }
+    tr {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
     }
     th {
         text-transform: uppercase;
         background-color: #f7f9fccc;
+        font-family: $font-inter;
+        font-weight: 500;
+        font-size: 12px !important;
+        line-height: 22px !important;
+        color: $main-text;
         img {
             margin-left: 2px;
             position: relative;
             top: 1px;
         }
+    }
+    td {
+        font-family: $font-inter;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
     }
     .checkbox-wrapper {
         width: 5rem;
@@ -33,22 +45,6 @@ $table-text-color: #171c26;
     .flag {
         width: 3rem;
         text-align: center;
-        span {
-            display: flex;
-            padding: 4px;
-            justify-content: center;
-            align-items: center;
-            color: $purple-text;
-            font-family: $font-inter;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 10px;
-            line-height: 16px;
-            background: #ededfc;
-            border: 1px solid rgba(210, 213, 220, 0.5);
-            border-radius: 6px;
-            display: inline-block;
-        }
     }
     .hospital {
         font-family: $font-inter;
@@ -58,7 +54,7 @@ $table-text-color: #171c26;
         min-width: 180px;
         border: 0;
     }
-    .sort-btn{
+    .sort-btn {
         padding: 0;
         font-family: $font-inter;
         font-weight: 500;
@@ -66,9 +62,10 @@ $table-text-color: #171c26;
         line-height: 18px;
         text-transform: uppercase;
         background-color: #f7f9fccc;
+        color: $main-text;
         border: 0;
         cursor: pointer;
-        img{
+        img {
             position: relative;
             top: 2px;
         }
@@ -81,7 +78,7 @@ $table-text-color: #171c26;
         border: 0;
         min-width: 80px;
         text-align: center;
-        background-color: $clear-white;
+        padding: 0;
     }
     .on-track,
     .on-hold {
@@ -153,8 +150,8 @@ $table-text-color: #171c26;
         align-items: center;
         font-family: $font-inter;
         font-weight: 500;
-        font-size: 14px;
-        line-height: 20px;
+        font-size: 12px;
+        line-height: 18px;
         color: $main-text;
         img {
             margin-right: 2px;
@@ -296,4 +293,31 @@ $table-text-color: #171c26;
     position: relative;
     padding: 0 !important;
     margin: 0;
+}
+
+.flag-btn-wrapper {
+    position: relative;
+    > button {
+        padding: 0;
+        border: 0;
+        cursor: pointer;
+        margin: 0;
+        background-color: transparent;
+        > span {
+            display: flex;
+            padding: 4px;
+            justify-content: center;
+            align-items: center;
+            color: $purple-text;
+            font-family: $font-inter;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 10px;
+            line-height: 16px;
+            background: #ededfc;
+            border: 1px solid rgba(210, 213, 220, 0.5);
+            border-radius: 6px;
+            display: inline-block;
+        }
+    }
 }

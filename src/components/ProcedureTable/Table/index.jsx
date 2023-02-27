@@ -6,11 +6,14 @@ import ReactCountryFlag from "react-country-flag";
 import { STATUS } from "..";
 import { useState } from "react";
 import AddNewDataModal from "../AddNewDataModal";
+import FilterCountry from "../FilterCountryModal";
 import ChangeStatusModal from "../ChangeStatusModal";
 
-const Table = ({ tableData, setTableData }) => {
+const Table = ({ tableData, setTableData, applyCountries }) => {
     const [isAddNewDataOpen, setIsAddNewDataOpen] = useState([false, null]);
     const [isStatusModalOpen, setIsStatusModalOpen] = useState([false, null]);
+    const [isCountryModalOpen, setIsCountryModalOpen] = useState([false, null]);
+
     const [isSorted, setIsSorted] = useState(null);
 
     const sortData = (property) => {
@@ -72,19 +75,34 @@ const Table = ({ tableData, setTableData }) => {
                             </label>
                         </td>
                         <td className="flag">
-                            {e.country ? (
-                                <ReactCountryFlag
-                                    countryCode={e.country.toUpperCase()}
-                                    svg
-                                    style={{
-                                        fontSize: "2em",
-                                        lineHeight: "2em",
-                                    }}
-                                    aria-label={`country ${e.country}`}
-                                />
-                            ) : (
-                                <span>RV</span>
-                            )}
+                            <div className="flag-btn-wrapper">
+                                <button
+                                    type="flag-btn"
+                                    onClick={() => setIsCountryModalOpen((prev) => [!prev[0], e.id])}
+                                >
+                                    {e.country ? (
+                                        <ReactCountryFlag
+                                            countryCode={e.country.toUpperCase()}
+                                            svg
+                                            style={{
+                                                fontSize: "2em",
+                                                lineHeight: "2em",
+                                            }}
+                                            aria-label={`country ${e.country}`}
+                                        />
+                                    ) : (
+                                        <span>RV</span>
+                                    )}
+                                </button>
+                                {isCountryModalOpen[0] && isCountryModalOpen[1] === e.id && (
+                                    <FilterCountry
+                                        isFromFlag
+                                        isOpen={isCountryModalOpen}
+                                        applyCountries={applyCountries}
+                                        setIsOpen={(bool) => setIsCountryModalOpen([bool, e.id])}
+                                    />
+                                )}
+                            </div>
                         </td>
                         <td className="hospital">{e.hospital}</td>
                         <td>

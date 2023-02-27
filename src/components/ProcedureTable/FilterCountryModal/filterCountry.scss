@@ -122,6 +122,7 @@ $modal-padding: 14px;
         overflow-y: scroll;
         li {
             padding: 1.3rem 1.6rem;
+            text-align: left !important;
         }
         .checked {
             background: #f0f5ff;
@@ -245,4 +246,10 @@ $modal-padding: 14px;
 
 .d-none {
     display: none;
+}
+
+.from-flag{
+    top: 3.5rem !important;
+    left: -1.6rem !important;
+    z-index: 5;
 }

@@ -28,7 +28,7 @@ const defaultTableData = [
         country: "fr",
         hospital: "Hospital Saint Mary",
         status: STATUS.ON_HOLD,
-        perYear: "",
+        perYear: "2",
         lastUpdate: 2021,
         marketShare: 70,
         dataScore: "A+",
@@ -137,7 +137,11 @@ const ProcedureTable = () => {
                 handleRemoveCountry={handleRemoveCountry}
                 setIsCountryFilterOpen={() => setIsCountryFilterOpen((prev) => !prev)}
             />
-            <Table tableData={tableData} setTableData={setTableData} />
+            <Table
+                tableData={tableData}
+                setTableData={setTableData}
+                applyCountries={setActiveCountries}
+            />
             <FilterCountryModal
                 isOpen={isCountryFilterOpen}
                 setIsOpen={setIsCountryFilterOpen}

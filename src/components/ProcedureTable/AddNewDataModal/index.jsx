@@ -25,8 +25,8 @@ const AddNewDataModal = ({ handleClose }) => {
                         <input label="Panel" defaultChecked type="radio" id="panel" name="sourceType" value="panel" />
                         <input label="HCOs" type="radio" id="hcos" name="sourceType" value="hcos" />
                         <input label="Source List" type="radio" id="sourceList" name="sourceType" value="sourceList" />
+                        <input label="Companies" type="radio" id="companies" name="sourceType" value="companies" />
                     </div>
-                    <p className="companies">Companies</p>
                 </div>
                 <div className="project-wrapper">
                     <p className="project-title">Project</p>

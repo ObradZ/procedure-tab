@@ -18,7 +18,7 @@ const defaultCountries = [
     { value: "portugal", label: "Portugal", id: 9, code: "pt" },
 ];
 
-const FilterCountry = ({ isOpen, setIsOpen, applyCountries }) => {
+const FilterCountry = ({ isOpen, setIsOpen, applyCountries, isFromFlag }) => {
     const [isExcludeActive, setIsExcludeActive] = useState(false);
 
     const [searchTerm, setSearchTerm] = useState("");
@@ -64,7 +64,7 @@ const FilterCountry = ({ isOpen, setIsOpen, applyCountries }) => {
     }, [debouncedSearch]);
 
     return (
-        <div className={["filter-country-modal", isOpen ? "" : "d-none"].join(" ")}>
+        <div className={["filter-country-modal", isOpen ? "" : "d-none", isFromFlag ? "from-flag" : ""].join(" ")}>
             <div className="header-wrapper">
                 <div className="title">
                     <button type="button" className="back-arrow" onClick={handleCancle}></button>Filter country
