@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FilterCountryModal from "./FilterCountryModal";
 import FilterOptions from "./FilterOptions";
 import Table from "./Table";
@@ -9,13 +9,13 @@ export const STATUS = {
     UNKOWN: "",
 };
 
-const tableData = [
+const defaultTableData = [
     {
         id: 0,
         country: "",
         hospital: "Gemini",
         status: STATUS.ON_TRACK,
-        perYear: 3,
+        perYear: "3",
         lastUpdate: 2021,
         marketShare: 70,
         dataScore: "A+",
@@ -28,7 +28,7 @@ const tableData = [
         country: "fr",
         hospital: "Hospital Saint Mary",
         status: STATUS.ON_HOLD,
-        perYear: null,
+        perYear: "",
         lastUpdate: 2021,
         marketShare: 70,
         dataScore: "A+",
@@ -41,7 +41,7 @@ const tableData = [
         country: "fr",
         hospital: "Hospital May the 15th",
         status: STATUS.ON_HOLD,
-        perYear: null,
+        perYear: "",
         lastUpdate: 2021,
         marketShare: 70,
         dataScore: "A+",
@@ -54,7 +54,7 @@ const tableData = [
         country: "fr",
         hospital: "Tarius landing page",
         status: STATUS.UNKOWN,
-        perYear: null,
+        perYear: "",
         lastUpdate: 2021,
         marketShare: 50,
         dataScore: "B",
@@ -67,7 +67,7 @@ const tableData = [
         country: "us",
         hospital: "USA hospital page",
         status: STATUS.UNKOWN,
-        perYear: null,
+        perYear: "",
         lastUpdate: 2021,
         marketShare: 50,
         dataScore: "B",
@@ -80,7 +80,7 @@ const tableData = [
         country: "se",
         hospital: "Hospital name",
         status: STATUS.UNKOWN,
-        perYear: null,
+        perYear: "",
         lastUpdate: 2021,
         marketShare: 50,
         dataScore: "B",
@@ -91,12 +91,13 @@ const tableData = [
 ];
 
 const ProcedureTable = () => {
+    const [tableData, setTableData] = useState(defaultTableData);
     const [activeCountries, setActiveCountries] = useState([]);
     const [isCountryFilterOpen, setIsCountryFilterOpen] = useState(false);
     const clearAll = () => {
         setActiveCountries([]);
     };
-    
+
     const handleRemoveCountry = (country) => {
         const currentIndex = activeCountries.findIndex((e) => e.id === country.id);
         const newChecked = [...activeCountries];
@@ -108,6 +109,17 @@ const ProcedureTable = () => {
         }
         setActiveCountries(newChecked);
     };
+
+    useEffect(() => {
+        if (activeCountries.length < 1) {
+            setTableData(defaultTableData);
+        } else {
+            const countryCodes = activeCountries.map((c) => c.code);
+            const filteredData = defaultTableData.filter((e) => countryCodes.includes(e.country));
+
+            setTableData(filteredData);
+        }
+    }, [activeCountries]);
 
     return (
         <div className="procedure-table">
@@ -125,7 +137,7 @@ const ProcedureTable = () => {
                 handleRemoveCountry={handleRemoveCountry}
                 setIsCountryFilterOpen={() => setIsCountryFilterOpen((prev) => !prev)}
             />
-            <Table tableData={tableData} />
+            <Table tableData={tableData} setTableData={setTableData} />
             <FilterCountryModal
                 isOpen={isCountryFilterOpen}
                 setIsOpen={setIsCountryFilterOpen}

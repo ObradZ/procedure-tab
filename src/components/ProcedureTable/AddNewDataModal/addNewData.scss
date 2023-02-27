@@ -1,0 +1,218 @@
+// CSS also used for ChangeStatusModal
+.add-new-data-modal {
+    position: absolute;
+    top: 4rem;
+    left: -14rem;
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    background: #f7f8fa;
+    /* Pop-Up L */
+    box-shadow: 0px 0px 0px 1px rgba(136, 143, 170, 0.1), 0px 30px 70px rgba(26, 34, 64, 0.15),
+        0px 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    .header {
+        padding: 1.6rem 2rem;
+        background-color: $clear-white;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+
+        h2 {
+            font-family: $font-inter;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: left;
+            margin: 0;
+        }
+    }
+    .content {
+        padding: 1.6rem;
+    }
+    .volue-year-label {
+        display: block;
+        margin-bottom: 5px;
+        text-align: left;
+        font-family: $font-inter;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        /* identical to box height, or 143% */
+        display: flex;
+        align-items: center;
+
+        #add-modal-data-year {
+            display: inline-block;
+        }
+        span {
+            color: $purple-text;
+            margin-left: 4px;
+        }
+    }
+    .year-input-wrapper {
+        display: flex;
+        align-items: center;
+        input {
+            border: 0;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 0px 0px 1px rgba(134, 143, 160, 0.16);
+            border-radius: 6px;
+            padding: 6px 12px;
+            font-family: $font-inter;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: $main-text;
+            width: 116px;
+        }
+        span {
+            top: 3px !important;
+            left: 1.2rem;
+        }
+    }
+}
+.source-type-wrapper {
+    text-align: left;
+}
+
+.radio {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    margin-top: 1rem;
+    background: $light-gray;
+    width: auto;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.radio input {
+    width: auto;
+    height: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 2px;
+    padding: 4px 8px;
+    background: $light-gray;
+    color: $main-text;
+    font-family: $font-inter;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    transition: all 100ms linear;
+    margin: 0;
+    border: 6px;
+}
+
+.radio input:checked {
+    background: $clear-white;
+    color: $purple-text;
+}
+
+.radio input:before {
+    content: attr(label);
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+.companies {
+    display: inline-block;
+    margin-left: 4px;
+    color: $main-text;
+    font-family: $font-inter;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.source-title,
+.project-title {
+    font-family: $font-inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 3.5rem 0 0;
+    letter-spacing: 0.02em;
+}
+
+.project-wrapper {
+    position: relative;
+    .project-title {
+        margin: 1.5rem 0;
+        text-align: left;
+    }
+    input {
+        background: $clear-white;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(70, 79, 96, 0.16);
+        border-radius: 6px;
+        padding: 6px 12px;
+        font-family: $font-inter;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        color: $main-text;
+        border: 0;
+    }
+    .project-custom-input {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .contact-input {
+        position: relative;
+        margin-left: 2.5rem;
+        margin-right: 1.6rem;
+        width: 238px;
+    }
+    .last-update-input {
+        width: 129px;
+        padding-right: 25px;
+        background-image: url("../../../assets/calendar.svg");
+        background-repeat: no-repeat;
+        background-position: 110px;
+    }
+    .arrow-icon {
+        position: absolute;
+        transform: rotate(-90deg);
+        bottom: 1.2rem;
+        left: 65.5%;
+    }
+}
+.project-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 7rem;
+    left: 1.5rem;
+    width: 1px;
+    height: 48px;
+    background-color: #e9edf5;
+    z-index: 3;
+}
+
+.buttons-wrapper {
+    padding: 1.6rem;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    background-color: $clear-white;
+    button:first-child {
+        margin-right: 2rem;
+    }
+}
+.add-new-data-modal::after {
+    content: "";
+    position: absolute;
+    left: 14rem;
+    top: -1rem;
+    width: 0;
+    height: 0;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-bottom: 1rem solid $clear-white;
+}

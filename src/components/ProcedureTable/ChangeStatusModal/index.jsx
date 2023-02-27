@@ -1,11 +1,34 @@
 import Button from "elements/Button";
-import ArrowIcon from 'assets/arrow-down.svg';
+import ArrowIcon from "assets/arrow-down.svg";
 
-const AddNewDataModal = ({ handleClose }) => {
+const ChangeStatusModal = ({ handleClose }) => {
     return (
-        <div className="add-new-data-modal">
-            <div className="header">
-                <h2>Add new data</h2>
+        <div className="status-modal add-new-data-modal">
+            <div className="status-options">
+                <p className="status-options-title">Change status</p>
+                <div className="radio-status">
+                    <div className="input-wrapper green">
+                        <input
+                            label="Perform"
+                            type="radio"
+                            id="perform"
+                            name="radio-status"
+                            value="perform"
+                        />
+                    </div>
+                    <div className="input-wrapper gray">
+                        <input label="Unknown" type="radio" id="unknown" name="radio-status" value="unknown" />
+                    </div>
+                    <div className="input-wrapper red">
+                        <input
+                            label="Not Perform"
+                            type="radio"
+                            id="notPerform"
+                            name="radio-status"
+                            value="notPerform"
+                        />
+                    </div>
+                </div>
             </div>
             <div className="content">
                 <label className="volue-year-label" htmlFor="add-modal-data-year">
@@ -44,4 +67,4 @@ const AddNewDataModal = ({ handleClose }) => {
     );
 };
 
-export default AddNewDataModal;
+export default ChangeStatusModal;

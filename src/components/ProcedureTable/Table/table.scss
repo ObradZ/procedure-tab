@@ -1,6 +1,10 @@
 $table-text-color: #171c26;
 .data-table {
     border-collapse: collapse;
+
+    .header-row {
+        background-color: #f7f9fccc;
+    }
     th,
     td {
         text-align: left;
@@ -13,7 +17,8 @@ $table-text-color: #171c26;
     }
     th {
         text-transform: uppercase;
-        img{
+        background-color: #f7f9fccc;
+        img {
             margin-left: 2px;
             position: relative;
             top: 1px;
@@ -51,10 +56,32 @@ $table-text-color: #171c26;
         font-size: 14px;
         line-height: 20px;
         min-width: 180px;
+        border: 0;
+    }
+    .sort-btn{
+        padding: 0;
+        font-family: $font-inter;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        text-transform: uppercase;
+        background-color: #f7f9fccc;
+        border: 0;
+        cursor: pointer;
+        img{
+            position: relative;
+            top: 2px;
+        }
+    }
+    .status-wrapper {
+        position: relative;
     }
     .status {
+        cursor: pointer;
+        border: 0;
         min-width: 80px;
         text-align: center;
+        background-color: $clear-white;
     }
     .on-track,
     .on-hold {
@@ -96,8 +123,8 @@ $table-text-color: #171c26;
         // justify-content: center;
         // align-items: center;
         text-align: center;
-        div,
-        button {
+        > div,
+        > div > button {
             margin: 0 auto;
             display: inline-block;
             font-family: $font-inter;
@@ -109,7 +136,7 @@ $table-text-color: #171c26;
             background: #e9edf5;
             border-radius: 4px;
         }
-        button {
+        .add-new-data-btn-wrapper > button {
             border: 1px dashed #807cea !important;
             outline: none;
             padding: 2px 5px;
@@ -194,9 +221,6 @@ $table-text-color: #171c26;
         color: #ef5466;
     }
 }
-.header-row {
-    background-color: #f7f9fccc;
-}
 
 .item-checkbox {
     display: block;
@@ -239,8 +263,8 @@ $table-text-color: #171c26;
 
 /* When the checkbox is checked, add a blue background */
 .item-checkbox input:checked ~ .checkmark {
-    background-color: $blue-text;
-    border-color: $blue-text;
+    background-color: $purple-text;
+    border-color: $purple-text;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -266,4 +290,10 @@ $table-text-color: #171c26;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+.add-new-data-btn-wrapper {
+    position: relative;
+    padding: 0 !important;
+    margin: 0;
 }
