@@ -1,5 +1,5 @@
 $table-text-color: #171c26;
-.data-table {
+.hp-data-table {
     border-collapse: collapse;
     position: relative;
     top: 1px;
@@ -47,21 +47,24 @@ $table-text-color: #171c26;
     }
     .checkbox-wrapper {
         width: 5rem;
+        height: 5.3rem;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .flag {
-        width: 3rem;
-        text-align: center;
-    }
-    .hospital {
-        font-family: $font-inter;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 20px;
-        min-width: 180px;
+    .procedureName {
+        min-width: 220px;
         border: 0;
+        button {
+            background: transparent;
+            cursor: pointer;
+            border: 0;
+            color: #5e5adb;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            font-family: $font-inter;
+        }
     }
     .sort-btn {
         padding: 0;
@@ -88,30 +91,27 @@ $table-text-color: #171c26;
         min-width: 80px;
         text-align: center;
         padding: 0;
-    }
-    .on-track,
-    .on-hold {
-        position: relative;
+        background: #ffedef;
+        color: #d1293d;
         font-family: $font-inter;
         font-weight: 500;
         font-size: 12px;
         line-height: 18px;
         border-radius: 4px;
-        display: flex;
-        align-items: center;
         letter-spacing: 0.03em;
-        padding: 1px 8px 1px 18px;
+        text-transform: capitalize;
     }
-    .on-track {
+    .yes {
         background: #e1fcef;
         color: #14804a;
     }
-    .on-hold {
+    .unknown {
         background: #e9edf5;
         color: #5a6376;
     }
-    .on-track::after,
-    .on-hold::after {
+    .yes::after,
+    .unknown::after,
+    .status::after {
         position: absolute;
         content: "";
         width: 6px;
@@ -119,15 +119,19 @@ $table-text-color: #171c26;
         border-radius: 2px;
         left: 8px;
         top: 7px;
-        background: #38a06c;
+        background-color: #d1293d;
     }
-    .on-hold::after {
-        background: #5a6376;
+    .unknown::after {
+        background: #5a6376 !important;
+    }
+    .yes::after {
+        background: #38a06c;
     }
     .year {
         // display: flex;
         // justify-content: center;
         // align-items: center;
+        min-width: 130px;
         text-align: center;
         > div,
         > div > button {
@@ -172,8 +176,7 @@ $table-text-color: #171c26;
         // display: flex;
         // justify-content: center;
         // align-items: center;
-        width: 140px;
-        text-align: center;
+        width: 180px;
         div {
             margin-right: 1rem;
             display: inline-block;
@@ -189,6 +192,13 @@ $table-text-color: #171c26;
             left: 0;
             border-radius: 4px;
             background: $purple-text;
+        }
+        .share-nation-fill {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 4px;
+            background: #1f0951;
         }
     }
     .score {
@@ -225,6 +235,27 @@ $table-text-color: #171c26;
     }
     .negative {
         color: #ef5466;
+    }
+
+    .projects {
+        min-width: 300px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        border: 0;
+        font-family: $font-inter;
+        span {
+            padding: 2px 8px;
+            border-radius: 16px;
+            height: 22px;
+            background: #eff8ff;
+            color: #175cd3;
+            margin-right: 4px;
+        }
+        .purple {
+            color: #6941c6;
+            background: #f9f5ff;
+        }
     }
 }
 
@@ -304,29 +335,8 @@ $table-text-color: #171c26;
     margin: 0;
 }
 
-.flag-btn-wrapper {
-    position: relative;
-    > button {
-        padding: 0;
-        border: 0;
-        cursor: pointer;
-        margin: 0;
-        background-color: transparent;
-        > span {
-            display: flex;
-            padding: 4px;
-            justify-content: center;
-            align-items: center;
-            color: $purple-text;
-            font-family: $font-inter;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 10px;
-            line-height: 16px;
-            background: #ededfc;
-            border: 1px solid rgba(210, 213, 220, 0.5);
-            border-radius: 6px;
-            display: inline-block;
-        }
-    }
+.arrow-btn {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
 }

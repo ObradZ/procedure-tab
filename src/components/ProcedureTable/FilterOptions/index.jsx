@@ -2,30 +2,26 @@ import FilterIcon from "assets/filter.svg";
 import TableIcon from "assets/table-icon.svg";
 import ArrowDownIcon from "assets/arrow-down.svg";
 import ActiveTag from "elements/ActiveTag";
-const FilterOptions = ({ activeCountries, setIsCountryFilterOpen, clearAll, handleRemoveCountry }) => {
+const FilterOptions = ({ activeFilters, setIsFilterOpen, clearAll, handleRemoveFilter, filterName }) => {
     return (
         <div className="filter-options">
-            <button type="button" className="filter-btn" onClick={setIsCountryFilterOpen}>
+            <button type="button" className="filter-btn" onClick={setIsFilterOpen}>
                 <img src={FilterIcon} alt="filter" />
-                <span>Country</span>
+                <span>{filterName}</span>
                 <img src={ArrowDownIcon} alt="arrow" />
             </button>
             <input className="search-option" type="text" placeholder="Search" />
             <div className="active-tags-wrapper">
                 <div className="active-tags">
-                    {activeCountries.map((country) => (
-                        <ActiveTag
-                            key={country.id}
-                            label={country.label}
-                            onClick={() => handleRemoveCountry(country)}
-                        />
+                    {activeFilters?.map((filter) => (
+                        <ActiveTag key={filter.id} label={filter.label} onClick={() => handleRemoveFilter(filter)} />
                     ))}
                 </div>
                 <div className="tags-buttons-wrapper">
                     <button className="table-btn" type="button">
                         <img src={TableIcon} alt="table" />
                     </button>
-                    <p className="filters-info">Filter: {activeCountries.length}</p>
+                    <p className="filters-info">Filter: {activeFilters?.length}</p>
                     <button type="button" className="clear-all-btn" onClick={clearAll}>
                         Clear all
                     </button>

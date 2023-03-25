@@ -1,11 +1,16 @@
 .filter-options {
     display: flex;
     align-items: center;
+    background-color: #fff;
+    >button{
+        min-width: 140px;
+    }
 }
 .active-tags-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #fff;
     > div {
         display: flex;
         justify-content: space-between;
@@ -52,6 +57,7 @@
     max-width: calc(100% - 408px);
     width: 100%;
     padding: 6px;
+    margin-left: auto;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(70, 79, 96, 0.16);
 }
 // Update width and scrollbar

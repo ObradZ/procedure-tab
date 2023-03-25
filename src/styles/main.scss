@@ -8,7 +8,14 @@
 @import "../components/ProcedureTable/Table/table.scss";
 @import "../components/ProcedureTable/AddNewDataModal/addNewData.scss";
 @import "../components/ProcedureTable/ChangeStatusModal/changeStatus.scss";
-
+@import "../components/HospitalProceduresTable/Table/hpTable.scss";
+@import "../components/HospitalProceduresTable/DrawerContent/drawerContent.scss";
+@import "../components/HospitalProceduresTable/DrawerContent/Sources/sources.scss";
+@import "../components/HospitalProceduresTable/DrawerContent/Sources/SourceItem/sourceItem.scss";
+@import "../components/HospitalProceduresTable/DrawerContent/Products/products.scss";
+@import "../components/HospitalProceduresTable/DrawerContent/Products/Product/product.scss";
+@import "../components/HospitalProceduresTable/DrawerContent/Hospitals/Hospital/hospital.scss";
+@import "../components/HospitalProceduresTable/DrawerContent/People/Person/person.scss";
 
 @import "../elements/Button/button.scss";
 @import "../elements/ActiveTag/activeTag.scss";

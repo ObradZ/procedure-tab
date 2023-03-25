@@ -1,0 +1,123 @@
+.sources-container {
+    display: flex;
+}
+.sources-left-container {
+    padding: 3.5rem 3rem 3.5rem 4rem;
+    width: 50%;
+    position: relative;
+}
+.sources-left-container::after {
+    content: "";
+    width: 1px;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #d5dbe5;
+}
+.purple-bold {
+    color: $purple-text;
+}
+.purple-bold,
+.green-bold {
+    font-weight: 700;
+}
+.green-bold {
+    color: #1ef234;
+}
+
+.sources-subtitle {
+    font-family: $font-inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: #171b1e;
+}
+
+.sources-text {
+    font-family: $font-inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: #171b1e;
+}
+
+.sources-icon {
+    position: absolute;
+    top: 5.3rem;
+    left: 0.4rem;
+}
+
+.sources-right-container {
+    width: 50%;
+    .right-title {
+        color: #595f69;
+        font-family: $font-inter;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        margin: 0;
+        margin-bottom: 1.4rem;
+    }
+}
+.sources-right-content-wrapper {
+    padding: 4px 8px;
+}
+.inner-tabs-wrapper {
+    border-bottom: 1px solid #d5dbe5;
+    border-top: 1px solid #d5dbe5;
+
+    button {
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        padding: 0;
+        color: $main-text;
+        font-family: $font-inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 8px 0;
+        margin: 0 8px;
+        border: 0;
+        outline: 0;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+    }
+
+    .selected {
+        border-bottom: 2px solid $purple-text !important;
+        color: $purple-text !important;
+        font-weight: 700 !important;
+    }
+
+    .source-btn{
+        color: #fff;
+        background-color: $purple-text;
+        border-radius: 8px;
+        padding: 4px 6px;
+    }
+}
+
+.sources-list {
+    padding: 1.9rem 7rem 1.9rem 1.2rem;
+}
+
+.light-purple {
+    background-color: #886cc0 !important;
+}
+
+.green {
+    background-color: #09bd3c !important;
+}
+
+.pink {
+    background-color: #e328af !important;
+}
+.light-blue {
+    background-color: #5ecfff !important;
+}

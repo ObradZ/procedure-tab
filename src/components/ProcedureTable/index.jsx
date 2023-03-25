@@ -9,7 +9,7 @@ export const STATUS = {
     UNKOWN: "",
 };
 
-const defaultTableData = [
+export const defaultTableData = [
     {
         id: 0,
         country: "",
@@ -132,16 +132,13 @@ const ProcedureTable = () => {
             </div>
             <TabsNav />
             <FilterOptions
-                activeCountries={activeCountries}
+                filterName="Country"
+                activeFilters={activeCountries}
                 clearAll={clearAll}
-                handleRemoveCountry={handleRemoveCountry}
-                setIsCountryFilterOpen={() => setIsCountryFilterOpen((prev) => !prev)}
+                handleRemoveFilter={handleRemoveCountry}
+                setIsFilterOpen={() => setIsCountryFilterOpen((prev) => !prev)}
             />
-            <Table
-                tableData={tableData}
-                setTableData={setTableData}
-                applyCountries={setActiveCountries}
-            />
+            <Table tableData={tableData} setTableData={setTableData} applyCountries={setActiveCountries} />
             <FilterCountryModal
                 isOpen={isCountryFilterOpen}
                 setIsOpen={setIsCountryFilterOpen}

@@ -1,0 +1,68 @@
+.source-item-wrapper {
+    padding: 12px 15px 12px 39px;
+    position: relative;
+    border-radius: 14px;
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 1rem;
+    .content-wrapper {
+        display: flex;
+        width: 100%;
+    }
+    .content {
+        margin-left: 6px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .subtitle,
+    .company {
+        font-family: $font-inter;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        margin: 0;
+    }
+    .company {
+        color: $blue-text;
+        font-weight: 700;
+    }
+    .calendar-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+        font-family: $font-inter;
+    }
+    .source-item-title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+        font-family: $font-inter;
+        margin: 0 0 6px 0;
+    }
+    .grade {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: $font-inter;
+        padding: 1px 9px;
+        border-radius: 14px;
+        background: #ffcf6d;
+    }
+}
+
+.source-item-color {
+    position: absolute;
+    width: 9px;
+    height: 70px;
+    border-radius: 14px;
+    background-color: $purple-text;
+    top: 12px;
+    left: 15px;
+}

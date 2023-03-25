@@ -1,24 +1,36 @@
+import { Link } from "react-router-dom";
+
 const navItems = [
-    { label: "Overview", counter: 0, isSelected: true },
-    { label: "Volumes", counter: 0 },
-    { label: "People", counter: 4 },
-    { label: "Projects", counter: 7 },
-    { label: "Library", counter: 12, separator: true },
-    { label: "Feedback", counter: 9 },
-    { label: "Evidence", counter: 0 },
-    { label: "Files", counter: 0 },
-    { label: "Questions", counter: 0 },
-    { label: "Coding", counter: 0 },
-    { label: "Permission", counter: 0 },
+    { label: "Overview", counter: 0, isSelected: true, link: "/" },
+    { label: "Volumes", counter: 0, link: "/" },
+    { label: "People", counter: 4, link: "/" },
+    { label: "Projects", counter: 7, link: "/projects" },
+    { label: "Library", counter: 12, separator: true, link: "/" },
+    { label: "Feedback", counter: 9, link: "/" },
+    { label: "Evidence", counter: 0, link: "/" },
+    { label: "Files", counter: 0, link: "/" },
+    { label: "Questions", counter: 0, link: "/" },
+    { label: "Coding", counter: 0, link: "/" },
+    { label: "Permission", counter: 0, link: "/" },
 ];
+
+// const navItems = [
+//     { label: "Overview", counter: 0, isSelected: true, link: "/" },
+//     { label: "Purchases", counter: 0, link: "/" },
+//     { label: "People", counter: 4, link: "/" },
+//     { label: "Procedures", counter: 7, link: "/projects" },
+//     { label: "Library", counter: 12, separator: true, link: "/" },
+//     { label: "Feedback", counter: 9, link: "/" },
+// ];
+
 const TabsNav = () => {
     return (
         <ul className="tabs-navigation">
             {navItems.map((item) => (
                 <li className={item.separator ? "tab-separator" : ""} key={item.label}>
-                    <button className={item.isSelected ? "selected" : ""}>
+                    <Link to={item.link} className={item.isSelected ? "selected" : ""}>
                         {item.label} {!!item.counter && <span>{item.counter}</span>}
-                    </button>
+                    </Link>
                 </li>
             ))}
         </ul>

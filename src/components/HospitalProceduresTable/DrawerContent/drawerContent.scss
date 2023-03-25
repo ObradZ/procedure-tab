@@ -1,0 +1,72 @@
+.drawer-content-wrapper {
+    padding: 1.6rem 0;
+    height: 100vh;
+    background-color: rgb(250, 250, 250);
+}
+.drawer {
+    width: 950px !important;
+}
+.drawer-title {
+    font-family: $font-inter;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #3f434a;
+    margin-bottom: 2.6rem;
+    margin-top: 0rem;
+    padding: 0 1rem;
+    span {
+        color: #0f6fdc;
+    }
+}
+.drawer-tabs {
+    .react-tabs__tab-list {
+        border-bottom: 1px solid #d5dbe5;
+        padding: 0 10px;
+        margin-bottom: 0;
+    }
+    .react-tabs__tab--selected {
+        border-bottom: 2px solid $purple-text !important;
+        color: $purple-text !important;
+        font-weight: 700 !important;
+        background-color: rgb(250, 250, 250);
+    }
+    .react-tabs__tab {
+        padding: 0;
+        font-family: $font-inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 8px 0;
+        margin: 0 8px;
+        border: 0;
+        outline: 0;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+        color: $main-text;
+    }
+    .react-tabs__tab:first-child {
+        margin-left: 0;
+    }
+    .react-tabs__tab:focus {
+        border-bottom: 2px solid $purple-text !important;
+    }
+    .react-tabs__tab:focus:after {
+        content: none;
+    }
+}
+
+.tab-counter {
+    font-family: $font-inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    padding: 2px 6px;
+    background-color: #E9EDF5;
+    border-radius: 13px;
+    margin-left: 6px;
+}

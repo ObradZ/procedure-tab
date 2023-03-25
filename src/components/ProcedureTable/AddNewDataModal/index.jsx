@@ -1,7 +1,7 @@
 import Button from "elements/Button";
-import ArrowIcon from 'assets/arrow-down.svg';
+import ArrowIcon from "assets/arrow-down.svg";
 
-const AddNewDataModal = ({ handleClose }) => {
+const AddNewDataModal = ({ handleClose, isProjectVisible = true }) => {
     return (
         <div className="add-new-data-modal">
             <div className="header">
@@ -28,13 +28,21 @@ const AddNewDataModal = ({ handleClose }) => {
                         <input label="Companies" type="radio" id="companies" name="sourceType" value="companies" />
                     </div>
                 </div>
-                <div className="project-wrapper">
-                    <p className="project-title">Project</p>
-                    <input type="text" className="project-custom-input" placeholder="Custom" />
-                    <input type="text" className="contact-input" placeholder="Contact" />
-                    <img className="arrow-icon" src={ArrowIcon} alt="arrow" />
-                    <input type="text" className="last-update-input" placeholder="Last Update" />
-                </div>
+                {isProjectVisible && (
+                    <div className="project-wrapper">
+                        <p className="project-title">Project</p>
+                        <input type="text" className="project-custom-input" placeholder="Custom" />
+                        <input type="text" className="contact-input" placeholder="Contact" />
+                        <img className="arrow-icon" src={ArrowIcon} alt="arrow" />
+                        <input type="text" className="last-update-input" placeholder="Last Update" />
+                    </div>
+                )}
+                {!isProjectVisible && (
+                    <div className="hyperlink-wrapper">
+                        <p className="project-title">Hyperlink</p>
+                        <input type="text" className="project-custom-input" placeholder="ex: www.hospital.com" />
+                    </div>
+                )}
             </div>
             <div className="buttons-wrapper">
                 <Button text="Cancel" inverted onClick={handleClose} />
