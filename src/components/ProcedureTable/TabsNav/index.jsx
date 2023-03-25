@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+import HospitalProcedures from "components/_pages/hospital-procedures";
+import Overview from "components/_pages/overview";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 const navItems = [
     { label: "Overview", counter: 0, isSelected: true, link: "/" },
@@ -14,26 +16,54 @@ const navItems = [
     { label: "Permission", counter: 0, link: "/" },
 ];
 
-// const navItems = [
-//     { label: "Overview", counter: 0, isSelected: true, link: "/" },
-//     { label: "Purchases", counter: 0, link: "/" },
-//     { label: "People", counter: 4, link: "/" },
-//     { label: "Procedures", counter: 7, link: "/projects" },
-//     { label: "Library", counter: 12, separator: true, link: "/" },
-//     { label: "Feedback", counter: 9, link: "/" },
-// ];
-
 const TabsNav = () => {
     return (
-        <ul className="tabs-navigation">
-            {navItems.map((item) => (
-                <li className={item.separator ? "tab-separator" : ""} key={item.label}>
-                    <Link to={item.link} className={item.isSelected ? "selected" : ""}>
-                        {item.label} {!!item.counter && <span>{item.counter}</span>}
-                    </Link>
-                </li>
-            ))}
-        </ul>
+        <div className="main-nav">
+            <Tabs className="drawer-tabs">
+                <TabList>
+                    {navItems.map((item) => (
+                        <Tab>
+                            {item.label}
+                            {!!item.counter && <span className="tab-counter">{item.counter}</span>}
+                        </Tab>
+                    ))}
+                </TabList>
+                <TabPanel>
+                    <Overview />
+                </TabPanel>
+                <TabPanel>
+                    <HospitalProcedures />
+                </TabPanel>
+                <TabPanel>
+                    <Overview />
+                </TabPanel>
+                <TabPanel>
+                    <Overview />
+                </TabPanel>
+                <TabPanel>
+                    <Overview />
+                </TabPanel>
+                <TabPanel>
+                    <Overview />
+                </TabPanel>
+                <TabPanel>
+                    <Overview />
+                </TabPanel>
+                <TabPanel>
+                    <Overview />
+                </TabPanel>
+                <TabPanel>
+                    <Overview />
+                </TabPanel>
+                <TabPanel>
+                    <Overview />
+                </TabPanel>
+                <TabPanel>
+                    <Overview />
+                </TabPanel>
+            </Tabs>
+        </div>
     );
 };
+
 export default TabsNav;

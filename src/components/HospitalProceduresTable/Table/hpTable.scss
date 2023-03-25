@@ -66,6 +66,17 @@ $table-text-color: #171c26;
             font-family: $font-inter;
         }
     }
+    .procedureNameHeader {
+        > button {
+            text-transform: uppercase;
+            background-color: #f7f9fccc;
+            font-family: $font-inter;
+            font-weight: 500;
+            font-size: 12px !important;
+            line-height: 22px !important;
+            color: $main-text !important;
+        }
+    }
     .sort-btn {
         padding: 0;
         font-family: $font-inter;

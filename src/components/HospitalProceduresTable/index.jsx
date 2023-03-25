@@ -1,4 +1,3 @@
-import TabsNav from "components/ProcedureTable/TabsNav";
 import { useState, useEffect } from "react";
 import Table from "./Table";
 import FilterOptions from "components/ProcedureTable/FilterOptions";
@@ -142,13 +141,12 @@ const HospitalProceduresTable = () => {
     return (
         <div className="procedure-table">
             <div className="procedure-table-header">
-                <h1>Procedure 1</h1>
+                <h1>Hospital Saint Mary</h1>
                 <h2>
-                    Level 1 <span>Procedure</span>
+                    Hospital in the <span>United Kingdom</span>
                 </h2>
-                <input type="text" placeholder="SEARCH" />
             </div>
-            <TabsNav />
+            {/* <TabsNav /> */}
             <FilterOptions
                 filterName="Speciality"
                 activeFilters={activeCountries}

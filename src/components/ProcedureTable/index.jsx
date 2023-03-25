@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import FilterCountryModal from "./FilterCountryModal";
 import FilterOptions from "./FilterOptions";
 import Table from "./Table";
-import TabsNav from "./TabsNav";
 export const STATUS = {
     ON_HOLD: "On hold",
     ON_TRACK: "On track",
@@ -130,7 +129,7 @@ const ProcedureTable = () => {
                 </h2>
                 <input type="text" placeholder="SEARCH" />
             </div>
-            <TabsNav />
+            {/* <TabsNav /> */}
             <FilterOptions
                 filterName="Country"
                 activeFilters={activeCountries}

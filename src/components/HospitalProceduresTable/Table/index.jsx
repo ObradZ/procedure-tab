@@ -33,7 +33,7 @@ const Table = ({ tableData, setTableData, toggleDrawer }) => {
                         </label>
                     </th>
                     <th></th>
-                    <th className="procedureName">
+                    <th className="procedureName procedureNameHeader">
                         <button className="sort-btn" onClick={() => sortData("procedureName")} type="button">
                             Procedure name <img src={SortingIcon} alt="sorting" />
                         </button>
