@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/procedure-tab/static/css/main.6f07a1e2.css",
-    "main.js": "/procedure-tab/static/js/main.5ca2e9c8.js",
+    "main.css": "/procedure-tab/static/css/main.139f3feb.css",
+    "main.js": "/procedure-tab/static/js/main.488ad4e2.js",
     "static/js/787.78b011e2.chunk.js": "/procedure-tab/static/js/787.78b011e2.chunk.js",
     "static/media/box-icon.svg": "/procedure-tab/static/media/box-icon.614d2afc1f24f02b98c42c34923585c9.svg",
     "static/media/source-calendar.svg": "/procedure-tab/static/media/source-calendar.d37c28047b5eaa06da0e63d5c6244324.svg",
@@ -22,12 +22,12 @@
     "static/media/folder.svg": "/procedure-tab/static/media/folder.e27360636148fe886c6d924c297b303a.svg",
     "static/media/Logo.svg": "/procedure-tab/static/media/Logo.a8a5007850a758209e1ea6ed66220881.svg",
     "static/media/arrow-down.svg": "/procedure-tab/static/media/arrow-down.bb8bdd7a45545d8b7a646667570344ab.svg",
-    "main.6f07a1e2.css.map": "/procedure-tab/static/css/main.6f07a1e2.css.map",
-    "main.5ca2e9c8.js.map": "/procedure-tab/static/js/main.5ca2e9c8.js.map",
+    "main.139f3feb.css.map": "/procedure-tab/static/css/main.139f3feb.css.map",
+    "main.488ad4e2.js.map": "/procedure-tab/static/js/main.488ad4e2.js.map",
     "787.78b011e2.chunk.js.map": "/procedure-tab/static/js/787.78b011e2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6f07a1e2.css",
-    "static/js/main.5ca2e9c8.js"
+    "static/css/main.139f3feb.css",
+    "static/js/main.488ad4e2.js"
   ]
 }
