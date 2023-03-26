@@ -3,6 +3,18 @@ $table-text-color: #171c26;
     border-collapse: collapse;
     position: relative;
     top: 1px;
+    height: 100%;
+    width: 100%;
+    thead {
+        display: block;
+        background-color: #f7f9fccc;
+    }
+    tbody {
+        display: block;
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: calc(100vh - 24rem);
+    }
     .header-row {
         background-color: #f7f9fccc;
     }
@@ -139,9 +151,6 @@ $table-text-color: #171c26;
         background: #38a06c;
     }
     .year {
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
         min-width: 130px;
         text-align: center;
         > div,
@@ -350,4 +359,39 @@ $table-text-color: #171c26;
     background: transparent;
     border: 0;
     cursor: pointer;
+}
+.arrow-placeholder {
+    min-width: 5.2rem;
+}
+
+.accordion {
+    overflow: hidden;
+    display: block;
+    transition: all 0.4s ease-in;
+    height: 106px;
+    tr::after {
+        content: none;
+    }
+}
+.closed {
+    // display: none;
+    height: 0 !important;
+    overflow: hidden;
+}
+.procedure2 {
+    color: #e328af !important;
+}
+
+.procedure3 {
+    color: #0090ff !important;
+}
+.accordion-open {
+    img {
+        transform: rotate(90deg);
+    }
+}
+.transition {
+    img {
+        transition: all 0.4s ease-in;
+    }
 }
