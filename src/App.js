@@ -6,8 +6,8 @@ import TabsNav from "components/ProcedureTable/TabsNav";
 function App() {
     return (
         <div className="App">
-            <Sidebar />
             <TabsNav />
+            <Sidebar />
         </div>
     );
 }
