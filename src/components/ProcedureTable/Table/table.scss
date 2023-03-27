@@ -3,6 +3,18 @@ $table-text-color: #171c26;
     border-collapse: collapse;
     position: relative;
     top: 1px;
+    height: 100%;
+    width: 100%;
+    thead {
+        display: block;
+        background-color: #f7f9fccc;
+    }
+    tbody {
+        display: block;
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: calc(100vh - 22rem);
+    }
     .header-row {
         background-color: #f7f9fccc;
     }

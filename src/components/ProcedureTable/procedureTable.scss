@@ -1,7 +1,6 @@
 .procedure-table {
     position: relative;
     width: 100%;
-    height: 100%;
     overflow: hidden;
 }
 
@@ -43,13 +42,13 @@
         font-weight: 500;
         font-size: 12px;
         line-height: 18px;
-        font-family: $font-inter !important;;
+        font-family: $font-inter !important;
         padding: 0.8rem 1rem;
     }
     input::placeholder {
         font-weight: 500;
         font-size: 12px;
         line-height: 18px;
-        font-family: $font-inter !important;;
+        font-family: $font-inter !important;
     }
 }

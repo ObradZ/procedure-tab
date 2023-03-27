@@ -77,7 +77,7 @@ const Row = ({ data, isAddNewDataOpen, setIsAddNewDataOpen, toggleDrawer }) => {
                     ))}
                 </td>
             </tr>
-
+            {/* Accordion - should be moved to different account */}
             <div className={`accordion ${isAccordionOpen ? "" : "closed"}`}>
                 <tr key={data.id}>
                     <td className="checkbox-wrapper">
@@ -194,6 +194,7 @@ const Row = ({ data, isAddNewDataOpen, setIsAddNewDataOpen, toggleDrawer }) => {
                     </td>
                 </tr>
             </div>
+            {/* End Accordion - should be moved to different account */}
         </>
     );
 };
